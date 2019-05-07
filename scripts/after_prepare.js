@@ -15,7 +15,7 @@ var getPreferenceValue = function(config, name) {
 if(process.argv.join("|").indexOf("APP_ID=") > -1) {
 	var APP_ID = process.argv.join("|").match(/APP_ID=(.*?)(\||$)/)[1]
 } else {
-	var config = fs.readFileSync("config.xml").toString()
+	var config = fs.readFileSync("www/config.xml").toString()
 	var APP_ID = getPreferenceValue(config, "APP_ID")
 }
 
